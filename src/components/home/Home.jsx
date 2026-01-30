@@ -8,6 +8,7 @@ import {
   selectFilters,
 } from "../../store/pokemonSlice";
 import TypeFilter from "../dropdowns/TypeFilter";
+import PokemonOfTheDay from "./PokemonOfTheDay";
 import GenderFilter from "../dropdowns/GenderFilter";
 import SearchBar from "./SearchBar";
 
@@ -104,6 +105,7 @@ export default function Home({ typeOptions, genderOptions }) {
 
   return (
     <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <PokemonOfTheDay />
       <div className="mb-12 p-8 bg-gradient-to-br from-gray-800 via-gray-900 to-black rounded-2xl shadow-2xl border-2 border-yellow-400/50 backdrop-blur">
         {/* Search and Filters */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">

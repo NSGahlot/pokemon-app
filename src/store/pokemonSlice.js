@@ -113,14 +113,20 @@ const pokemonSlice = createSlice({
       const exists = state.comparisonPokemons.some((p) => p.id === payload.id);
       if (!exists && state.comparisonPokemons.length < 3) {
         state.comparisonPokemons.push(payload);
-        localStorage.setItem("comparisonPokemons", JSON.stringify(state.comparisonPokemons));
+        localStorage.setItem(
+          "comparisonPokemons",
+          JSON.stringify(state.comparisonPokemons),
+        );
       }
     },
     removeComparisonPokemon: (state, { payload }) => {
       state.comparisonPokemons = state.comparisonPokemons.filter(
         (p) => p.id !== payload,
       );
-      localStorage.setItem("comparisonPokemons", JSON.stringify(state.comparisonPokemons));
+      localStorage.setItem(
+        "comparisonPokemons",
+        JSON.stringify(state.comparisonPokemons),
+      );
     },
     clearComparison: (state) => {
       state.comparisonPokemons = [];

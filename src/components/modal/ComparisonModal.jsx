@@ -103,52 +103,7 @@ export default function ComparisonModal({ isOpen, onClose }) {
                     ))}
                   </div>
                 </div>
-                <div className="flex flex-col sm:flex-row gap-4 mt-2">
-                  <div>
-                    <p className="text-xs font-bold text-red-500 mb-1">
-                      Weak Against
-                    </p>
-                    <div className="flex gap-1 flex-wrap">
-                      {pokemon.disabilities?.damage_relations
-                        ?.double_damage_from?.length ? (
-                        pokemon.disabilities.damage_relations.double_damage_from.map(
-                          (t, i) => (
-                            <span
-                              key={i}
-                              className="px-2 py-0.5 text-xs rounded-full bg-red-100 text-red-700 border border-red-200 font-semibold"
-                            >
-                              {toUpperCase(t.name)}
-                            </span>
-                          ),
-                        )
-                      ) : (
-                        <span className="text-xs text-gray-400">None</span>
-                      )}
-                    </div>
-                  </div>
-                  <div>
-                    <p className="text-xs font-bold text-green-600 mb-1">
-                      Strong Against
-                    </p>
-                    <div className="flex gap-1 flex-wrap">
-                      {pokemon.disabilities?.damage_relations?.double_damage_to
-                        ?.length ? (
-                        pokemon.disabilities.damage_relations.double_damage_to.map(
-                          (t, i) => (
-                            <span
-                              key={i}
-                              className="px-2 py-0.5 text-xs rounded-full bg-green-100 text-green-700 border border-green-200 font-semibold"
-                            >
-                              {toUpperCase(t.name)}
-                            </span>
-                          ),
-                        )
-                      ) : (
-                        <span className="text-xs text-gray-400">None</span>
-                      )}
-                    </div>
-                  </div>
-                </div>
+                {/* Removed Weak Against and Strong Against sections as requested */}
                 <div>
                   <p className="text-xs font-bold text-gray-500 mb-2 tracking-wide">
                     BASE STATS

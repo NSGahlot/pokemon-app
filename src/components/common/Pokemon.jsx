@@ -95,6 +95,7 @@ export default function Pokemon() {
   };
 
   const showPokemonModal = (id, name = "bulbasaur") => {
+    setIsComparisonOpen(false); // Ensure comparison modal closes
     document.body.style.overflow = "hidden";
     dispatch(setSelectedPokemon(id));
     modalRef.current.showModal();

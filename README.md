@@ -42,3 +42,7 @@ A modern Pokédex application built with React, Vite, Redux Toolkit, and Tailwin
 - `npm run build` - Build for production
 - `npm run preview` - Preview production build
 - `npm run lint` - Run ESLint
+
+Note: Repository was reinitialized due to a corrupted git configuration issue.
+
+
